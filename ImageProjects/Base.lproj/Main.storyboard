@@ -39,20 +39,33 @@
                                     <action selector="selectImage:" destination="BYZ-38-t0r" eventType="touchDown" id="IvN-sz-x7N"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sj-Sz-WeI">
+                                <rect key="frame" x="20" y="548" width="374" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="fkg-xi-myf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1UX-em-Ecu" secondAttribute="trailing" constant="87" id="BUa-HQ-xT9"/>
                             <constraint firstItem="1UX-em-Ecu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="292" id="ECW-gk-rpi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0sj-Sz-WeI" secondAttribute="trailing" constant="20" id="TDC-HT-nM6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fv4-UU-LKm" secondAttribute="trailing" constant="20" id="dtS-s9-v15"/>
                             <constraint firstItem="Fv4-UU-LKm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dwH-cp-DPq"/>
                             <constraint firstItem="1UX-em-Ecu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="jWR-bc-K2M"/>
                             <constraint firstItem="Fv4-UU-LKm" firstAttribute="top" secondItem="1UX-em-Ecu" secondAttribute="bottom" constant="10" id="jbP-do-i9Y"/>
+                            <constraint firstItem="0sj-Sz-WeI" firstAttribute="top" secondItem="Fv4-UU-LKm" secondAttribute="bottom" constant="26" id="liG-gq-4Ck"/>
+                            <constraint firstItem="0sj-Sz-WeI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="us2-3X-Zim"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="1UX-em-Ecu" id="Hdr-Tv-QU9"/>
+                        <outlet property="lll" destination="0sj-Sz-WeI" id="9at-42-scS"/>
                         <outlet property="pickImage" destination="8bC-Xf-vdC" id="92n-wG-5GI"/>
                     </connections>
                 </viewController>
