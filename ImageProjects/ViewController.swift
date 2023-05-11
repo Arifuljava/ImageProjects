@@ -37,9 +37,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         if let pickedImage = info[.originalImage] as? UIImage {
                imageView.contentMode = .scaleAspectFill
                imageView.image = pickedImage
-            let imageUri = info[.imageURL]
+            let imageUri = info[.imageURL] as? URL
+            
+         
+            
+            
+        
+           
            
             let stringValue = String(describing: imageUri)
+            print(stringValue)
+        
+            let urlString = URL(string: stringValue)
+            let name = urlString?.lastPathComponent
+            print("image \n\n\n")
+            print(name)
+         
             let imageData: Data = pickedImage.jpegData(compressionQuality: 0.4) ?? Data()
             let encodedImage: String = imageData.base64EncodedString()
          // print("Encoding Uri : \n\n\n")
@@ -58,8 +71,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
                 // Use the image object here
                 // For example, you can display it in an image view:
                 let imageView = UIImageView(image: image)
-                print("gggg")
-                print(image)
+                
                 // Add the imageView to your view hierarchy
             } else {
                 // Failed to load the image
