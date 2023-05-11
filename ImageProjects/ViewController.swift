@@ -21,16 +21,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         lll.isHidden = true
+        
     }
 
     @IBAction func selectImage(_ sender: UIButton) {
         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum)
         {
-            print("Button Clicked")
-            imagePickercontroller.delegate = self
-            imagePickercontroller.sourceType = .savedPhotosAlbum
-            imagePickercontroller.allowsEditing = false
-            present(imagePickercontroller,animated: true,completion: nil)
+            /*
+             print("Button Clicked")
+             imagePickercontroller.delegate = self
+             imagePickercontroller.sourceType = .savedPhotosAlbum
+             imagePickercontroller.allowsEditing = false
+             present(imagePickercontroller,animated: true,completion: nil)
+             */
+            
+            let sec = storyboard?.instantiateViewController(identifier: "tooled") as! ToolBarControllered
+                                        present(sec,animated: true)
             
         }
             
