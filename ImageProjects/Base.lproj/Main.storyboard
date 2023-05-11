@@ -1,24 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageProjects" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1UX-em-Ecu">
+                                <rect key="frame" x="87" y="335" width="240" height="129"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="SBL-Cf-y0D"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fv4-UU-LKm">
+                                <rect key="frame" x="20" y="474" width="374" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="k1C-mA-enN"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Pick up Image" cornerStyle="dynamic">
+                                    <backgroundConfiguration key="background" cornerRadius="12" strokeWidth="2" strokeOutset="2">
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="strokeColor" red="1" green="0.82140772650000005" blue="0.56213477789999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="selectImage:" destination="BYZ-38-t0r" eventType="touchDown" id="IvN-sz-x7N"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1UX-em-Ecu" secondAttribute="trailing" constant="87" id="BUa-HQ-xT9"/>
+                            <constraint firstItem="1UX-em-Ecu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="292" id="ECW-gk-rpi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fv4-UU-LKm" secondAttribute="trailing" constant="20" id="dtS-s9-v15"/>
+                            <constraint firstItem="Fv4-UU-LKm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dwH-cp-DPq"/>
+                            <constraint firstItem="1UX-em-Ecu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="jWR-bc-K2M"/>
+                            <constraint firstItem="Fv4-UU-LKm" firstAttribute="top" secondItem="1UX-em-Ecu" secondAttribute="bottom" constant="10" id="jbP-do-i9Y"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="1UX-em-Ecu" id="Hdr-Tv-QU9"/>
+                        <outlet property="pickImage" destination="8bC-Xf-vdC" id="92n-wG-5GI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="83.705357142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
